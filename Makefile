@@ -23,8 +23,14 @@ git-hooks:
 setup: $(VENV_DIR) git-hooks
 
 clean:
-	find . -name "*.pyc" | xargs rm
-	find . -name "*test.html" | xargs rm
+ifeq ($(PLATFORM),Linux)
+	find . -name "*.pyc" | xargs -r rm -rf
+	find . -name "*test.html" | xargs  -r rm -rf
+else
+	find . -name "*.pyc" | xargs rm -rf
+	find . -name "*test.html" | xargs rm -rf
+endif
+
 
 cleanall: clean
 	rm -rf $(VENV_DIR)
