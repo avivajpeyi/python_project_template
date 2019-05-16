@@ -16,7 +16,7 @@ Below are the steps required to make this happen. If you have already gone throu
 	
 	6.	`Add` your changes with `git add <filename>` or `git add -A` to add all changes.
 	
-  	7. and `commit` your changes with `git commit -m "commit message goes here"`
+  	7. 	`commit` your changes with `git commit -m "commit message goes here"`
 	
 	8.	`Push` your changes to your fork by running the following command (where `branch_name` is the name of the branch you just committed to): `git push origin branch_name`. If the branch does not yet exist in your fork on GitHub, it will be created automatically when you first push to it. The name `origin` refers name of the remote repository that you cloned from. In the last step of this guide you will create a link to a second remote repository.
 	
