@@ -1,6 +1,6 @@
 # GitHub Workflow
 
-# How to contribute to a git repo
+## How to contribute to a git repo
 
 When contributing to a codebase that is hosted on GitHub, one does not push changes directly to the main repository. Instead, you push your work to a `fork` of the `repository`, and then you request that your changes be pulled into the main repository by making a `pull request`.
 
@@ -29,18 +29,16 @@ ___
 ## Grabbing a branch from someone else's fork:
 
 1. `git branch -a`
-> This should show you all the branches in your local repo and in the `remote` (the online forks of this repository)
+  This should show you all the branches in your local repo and in the `remote` (the online forks of this repository)
 2. `git remote add coworker git://path/to/coworkers/repo.git`
-> This adds your coworker's fork as another remote linked to your local repository
+   This adds your coworker's fork as another remote linked to your local repository
 3. `git fetch coworker`
-> This updates your local remote/coworker repository to your coworker's fork
+  This updates your local remote/coworker repository to your coworker's fork
 4. `git branch -a
-> This should show you all the branches in your local repo and the `remote` (now with your coworker's branches)
+  This should show you all the branches in your local repo and the `remote` (now with your coworker's branches)
 5. `git checkout -b <name of local branch> coworker/<name of remote branch>`
-> This makes a new branch in your local repo, that is linked to your coworker's remote branch.
+  This makes a new branch in your local repo, that is linked to your coworker's remote branch.
 
-
-gitk --all &
 
 ____
 ## Setting up git-ssh
