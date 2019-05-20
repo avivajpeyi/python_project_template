@@ -1,5 +1,7 @@
 # GitHub Workflow
 
+# How to contribute to a git repo
+
 When contributing to a codebase that is hosted on GitHub, one does not push changes directly to the main repository. Instead, you push your work to a `fork` of the `repository`, and then you request that your changes be pulled into the main repository by making a `pull request`.
 
 Below are the steps required to make this happen. If you have already gone through these steps before and you want to make another contribution, skip to step 3.
@@ -23,8 +25,23 @@ Below are the steps required to make this happen. If you have already gone throu
 9.	Create a `pull request`. On the GitHub page for your `fork` you should see a new message that you have pushed to a branch, and a `Compare & pull request` button. Click on this button, make sure everything looks good, and click on `Create pull request`. The owner(s) of the repository can now review your pull request, and merge your changes if they look good.
 
 10.	Once your changes have been accepted, or if the main repository has changed, you will want to update your local repository’s master branch to reflect the new masterbranch of the main repository. If this is the first time you are doing this, you need to add a `new remote`, which links your local repository with a remote repository. Cloning automatically created the remote named origin, you can create a remote that points to the main repository like so: `git remote add main <url of the main repository>` You can get the URL for the main repository using the `Clone or download` button on the page of the main repository. Now switch back to the master branch in your local repository by running `git checkout master`. Pull in the latest version of the main repository’s master branch by running `git pull main master`. If all goes well, your local master branch will now be the same as the main repsitory’s master branch. To make another contribution, go back to step 4.
+___
+## Grabbing a branch from someone else's fork:
 
+1. `git branch -a`
+> This should show you all the branches in your local repo and in the `remote` (the online forks of this repository)
+2. `git remote add coworker git://path/to/coworkers/repo.git`
+> This adds your coworker's fork as another remote linked to your local repository
+3. `git fetch coworker`
+> This updates your local remote/coworker repository to your coworker's fork
+4. `git branch -a
+> This should show you all the branches in your local repo and the `remote` (now with your coworker's branches)
+5. `git checkout -b <name of local branch> coworker/<name of remote branch>`
+> This makes a new branch in your local repo, that is linked to your coworker's remote branch.
+
+
+gitk --all &
 
 ____
-## Note: 
+## Setting up git-ssh
 Look at [this](https://help.github.com/en/articles/connecting-to-github-with-ssh) to learn how to use `ssh` while commiting so that you do not have to put in your github password everytime you use git.
