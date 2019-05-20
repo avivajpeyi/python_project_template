@@ -28,16 +28,16 @@ Below are the steps required to make this happen. If you have already gone throu
 ___
 ## Grabbing a branch from someone else's fork:
 
-1. `git branch -a`
-  This should show you all the branches in your local repo and in the `remote` (the online forks of this repository)
+1. `git branch -a`  
+    * This should show you all the branches in your local repo and in the `remote` (the online forks of this repository)
 2. `git remote add coworker git://path/to/coworkers/repo.git`
-   This adds your coworker's fork as another remote linked to your local repository
-3. `git fetch coworker`
-  This updates your local remote/coworker repository to your coworker's fork
+    * This adds your coworker's fork as another remote linked to your local repository
+3. `git fetch coworker` 
+    * This updates your local remote/coworker repository to your coworker's fork
 4. `git branch -a
-  This should show you all the branches in your local repo and the `remote` (now with your coworker's branches)
+    * This should show you all the branches in your local repo and the `remote` (now with your coworker's branches)
 5. `git checkout -b <name of local branch> coworker/<name of remote branch>`
-  This makes a new branch in your local repo, that is linked to your coworker's remote branch.
+    * This makes a new branch in your local repo, that is linked to your coworker's remote branch.
 
 
 ____
