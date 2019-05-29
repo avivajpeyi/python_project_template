@@ -2,11 +2,11 @@
 
 ## How to contribute to a git repo
 
-When contributing to a codebase that is hosted on GitHub, one does not push changes directly to the main repository. Instead, you push your work to a `fork` of the `repository`, and then you request that your changes be pulled into the main repository by making a `pull request`.
+When contributing to a codebase that is hosted on GitHub, one does not push changes directly to the main repository. Instead, you push your work to a `fork` of the `repository`, and then you request that your changes be pulled into the main repository by making a `pull request`.
 
 Below are the steps required to make this happen. If you have already gone through these steps before and you want to make another contribution, skip to step 3.
 
-1.	Fork the repository on GitHub by pressing the `Fork` button in the upper right of the main repository’s GitHub page. This creates a copy of the repository under your account.
+1. Fork the repository on GitHub by pressing the `Fork` button in the upper right of the main repository’s GitHub page. This creates a copy of the repository under your account.
 
 2.	Clone your `fork` to your machine. Make sure you are on the page for your fork and **not** the page of the main repository. You can get the clone URL by clicking on the green `Clone or Download` button.
 
@@ -39,7 +39,26 @@ ___
 5. `git checkout -b <name of local branch> coworker/<name of remote branch>`
     * This makes a new branch in your local repo, that is linked to your coworker's remote branch.
 
+___
+## Synching/Updating fork from upsteam
+![](https://rick.cogley.info/img/Cogley-Post-git-fork-merge.svg)
 
-____
+1. Check current remotes 
+    * `git remote -v`
+2. Specify a remote upstream repo to sync with your fork
+    *  `git remote add upstream <Orignal/Repo/Git/Link>`
+3. Verify upstream repo set
+    * `git remote -v`
+4. Fetch branches and commits from the upstream repo. You’ll be storing the commits to master in a local branch upstream/master
+    * `git fetch upstream`
+5. Checkout your fork’s local master, then merge changes from upstream/master into it
+    * `git checkout master`
+    * `git merge upstream/master`
+6. Push changes to update your fork on Github.
+    * `git push origin master`
+
+Your origin (fork on Github) should now be synched up with upstream (the original repo)
+
+___
 ## Setting up git-ssh
 Look at [this](https://help.github.com/en/articles/connecting-to-github-with-ssh) to learn how to use `ssh` while commiting so that you do not have to put in your github password everytime you use git.
