@@ -2,7 +2,7 @@
 #
 repos:
 -   repo: https://github.com/ambv/black
-    rev: stable
+    rev: 22.3.0
     hooks:
     - id: black
 -   repo: https://github.com/pre-commit/pre-commit-hooks
@@ -12,6 +12,6 @@ repos:
     - id: requirements-txt-fixer
     - id: trailing-whitespace
 -   repo: https://github.com/pre-commit/mirrors-isort
-    rev: v4.3.4
+    rev: v5.10.1
     hooks:
     - id: isort
